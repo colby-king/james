@@ -1,0 +1,36 @@
+/*#intro{
+	background: url({{site.baseurl}}/images/background.jpg) no-repeat center center fixed;
+}*/
+
+.PostContainer{
+	padding-right: 10% !important;
+	padding-left: 10% !important;
+	padding-bottom: 30px !important;
+	padding-top: 5%
+}
+
+.PostImage{
+	height: 200px;
+	width: 300px;
+}
+
+.BlogPost{
+	display: inline-block;
+}
+
+.ContactInfo{
+	display: -webkit-inline-box;
+}
+
+.ContactInfo > * { 
+	width: 25%;
+	text-align: center;
+}
+
+.ContactInfo > * > *{ 
+	text-align: center;
+}
+
+img {
+    image-orientation: from-image;
+}

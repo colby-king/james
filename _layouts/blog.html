@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+  Jekyll integration by somiibo.com
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	{% include head.html %}
+
+</head>
+<body class="is-loading">
+
+	<!-- Wrapper -->
+	<div id="wrapper" class="">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
+		</header>
+
+
+		<!-- Nav -->
+		<nav id="nav">
+
+			{% include nav.html %}
+
+			<ul class="icons">
+				<li><a href="https://twitter.com/{{site.twitter}}" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+				<li><a href="https://facebook.com/{{site.facebook}}" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+				<li><a href="https://instagram.com/{{site.instagram}}" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+				<li><a href="https://github.com/{{site.github}}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<section class="featured">
+				<article class="featured">
+					<header class="major">
+						<h2><a href="#">Importance of Blog</a></h2>
+						<p>Blogs are really pretty awesome things. For one, they are a means to continually provide fresh,
+							dynamic content to your users. Also, they help your site get indexed and build authority as they are essential for SEO!
+						</p>
+					</header>
+					<p>
+						At that point, rather than pushing something superfluous to your users, you can give them something that will stick.
+						You'll give them something they can identify with and be slanted to share with their companions and associates. Perhaps they'll even be slanted to work with you later on!
+						Having an advancement technique that is excessively unbending isn't astute on the grounds that there is no space for solid spontaneous creation. Having the capacity to change your advertising procedure will prompt more deals and arrangements.
+					</p>
+					<p>
+					{% for post in site.posts limit:1 %}
+						{{post.content}}
+					{% endfor %}
+					</p>
+
+				</article>
+			</section>
+			<!-- Post -->
+			<section class="PostContainer">
+				{% for post in site.posts %}
+				{% assign t1 = forloop.index %}
+				{% assign mod3 = forloop.index | modulo: 3 %}
+				<article class="BlogPost">
+					<header>
+						<span class="date">{{ post.date | date_to_string }}</span>
+						<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+					</header>
+					<p>
+						<span class="image left">
+							<a href="{{ post.url | absolute_url }}" class="image">
+								<img class="PostImage" src="{{ post.image | absolute_url }}" alt="" />
+							</a>
+						</span>
+					{{ post.excerpt }}
+					</p>
+				</article>
+				{% endfor %}
+
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		{% include foot.html %}
+
+	</div>
+
+	<!-- Scripts -->
+	{% include scripts-main.html %}
+	{% include tracking.html %}
+
+</body>
+</html>

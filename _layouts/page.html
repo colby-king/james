@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+  Jekyll integration by somiibo.com
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+    {% include head.html %}
+	</head>
+	<body class="is-loading">
+		<!-- Wrapper -->
+			<div id="wrapper" class="">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
+				</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+
+            {% include nav.html %}
+
+			<ul class="icons">
+              <li><a href="https://instagram.com/{{site.instagram}}" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+				<div id="main">
+
+					<!-- Post -->
+					<section class="post">
+						<p>{{content}}</p>
+					</section>
+
+					<!-- Footer -->
+					
+					</div>
+		<div id="copyright">
+ 			<!-- <ul><li>&copy; HTML5 UP</li><li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a></li><li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a></li></ul>-->
+		</div>
+
+			</div>
+
+			<!-- Scripts -->
+			{% include scripts-main.html %}
+			{% include tracking.html %}
+
+		<script>
+			baguetteBox.run('.gallery');
+		</script>
+
+	</body>
+</html>

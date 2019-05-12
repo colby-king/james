@@ -1,0 +1,43 @@
+---
+layout: page
+title: James Roberts
+description: 
+sitemap:
+    priority: 0.7
+    lastmod: 2017-11-02
+    changefreq: weekly
+---
+<header class="major">
+	<div class="">
+		<h1>Portfolio</h1>
+	</div>
+</header>
+<!-- Image -->
+	<div class="box alt">
+		<div class="row 75% uniform gallery">
+			{% assign counter = 0 %}
+			{% for image in site.static_files %}
+			    {% if image.path contains 'images/tattoos' %}
+			    	{% if counter == 0%}
+			    	<div class="row">
+			    	{% endif %}
+					<div class="4u">
+						{% assign counter = counter | plus:1 %}
+						<a href="{{site.baseurl}}{{image.path}}"">
+							<span class="image fit">
+								<img src="{{site.baseurl}}{{image.path}}" alt="image" />
+							</span>
+						</a>
+					</div>
+					{% assign newrow = counter | modulo:3%}
+					{% if newrow == 0 %}
+					</div>
+					<div class="row">
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+			</div>
+			<!-- Break -->
+		</div>
+	</div>
+
