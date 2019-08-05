@@ -5,6 +5,9 @@ description:        ""
 locale:             en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
+instagram_id: "239747295"
+instagram_client_id: "e25c0b31e580478b908aa9015e985b5e"
+instagram_access_token: "239747295.1677ed0.a88296a77d844390a66bc5345c911ece"
 
 defaults:
 - scope:

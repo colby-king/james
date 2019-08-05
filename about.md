@@ -5,7 +5,7 @@ description: James Roberts' about page
 ---
 
 <div class="">
-<span class="image right"><img src="{{ "/images/jamesandcasie.jpg" | absolute_url }}" alt="" />
+<span class="image right"><img src="{{ "/images/james-roberts-profile-shot.jpg" | absolute_url }}" alt="" />
 </span>
 <h2>About James</h2>
 

@@ -53,18 +53,19 @@ changefreq: weekly
 		<!-- Main -->
 		<div id="main">
 			<!-- Featured Post -->
-			<div class="">
-				<span class="image right"><img src="{{ "/images/jamesandcasie.jpg" | absolute_url }}" alt="" />
-				</span>
-				<h2>About James</h2>
+			<script>
+				var feed = new Instafeed({
+		            get: 'user',
+		            userId: '{{site.instagram_id}}',
+		            accessToken: '{{site.instagram_access_token}}',
+		            template: '<a class="insta-link" href="{%raw%}{{link}}{%endraw%}"><img class="insta-img" src="{%raw%}{{image}}{%endraw%}" /></a>',
+		            resolution: 'standard_resolution',
+		            limit: 12
+	        	});
+	        feed.run();
+			</script>
 
-				<p>
-				James Roberts has been tattooing for over seven years in the city of Pittsburgh. He started working in the tattooing field at fifteen doing cleaning and general front counter duties. He joined Ravenwood alongside his darling coworker Kaitlyn in September of 2017.
-				</p>
-				<p>
-				He is best known for incredibly detail-oriented work featuring an illustrative style utilizing dot-work and intricate lines. He specializes in custom botanical, landscape, and anatomical tattoos. James works mostly with black and white ink. He uses minimal color to create ornate and dynamic pieces, ranging from delicate dot work to bold black-work.
-				</p>
-			</div>
+			<div id="instafeed"></div>
 		</div>
 		<div id="copyright">
  			<!-- <ul><li>&copy; HTML5 UP</li><li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a></li><li>Jekyll Integration by <a href="https://soundgrail.com">SoundGrail</a></li></ul>-->
